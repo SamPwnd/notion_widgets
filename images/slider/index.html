@@ -131,7 +131,7 @@ body {
     // Ciclo per assegnare lo stile CSS a ciascun elemento
     for (var i = 1; i < slides.length+1; i++) {
        // Costruire l'URL dell'immagine con il numero dell'iterazione corrente
-       var imageUrl = i + '.png';
+       var imageUrl = (i+1) + '.png';
 
        // Assegnare lo stile CSS all'elemento corrente
        slides[i-1].style.background = 'url("' + imageUrl + '") no-repeat center center/cover';
