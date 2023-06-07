@@ -45,17 +45,17 @@ body {
 
 .slide:first-child {
   background: url("1.png") no-repeat
-    center top/cover;
+    center center/cover;
 }
 
 .slide:nth-child(2) {
   background: url("2.png") no-repeat
-    center top/cover;
+    center center/cover;
 }
 
 .slide:nth-child(3) {
   background: url("3.png") no-repeat
-    center top/cover;
+    center center/cover;
 }
 
 
@@ -114,15 +114,16 @@ body {
     <div class="slide"></div>
 
   </div>
-  <div class="buttons">
-    <button id="prev"><i class="fas fa-arrow-left"></i></button>
+  <!-- <div class="buttons">
+     <button id="prev"><i class="fas fa-arrow-left"></i></button>
     <button id="next"><i class="fas fa-arrow-right"></i></button>
   </div>
+  -->
   <!-- partial -->
   <script>
     const slides = document.querySelectorAll(".slide");
-    const nextButton = document.getElementById("next");
-    const prevButton = document.getElementById("prev");
+    //const nextButton = document.getElementById("next");
+    //const prevButton = document.getElementById("prev");
     const auto = true;
     const intervalTime = 5000;
     let slideInterval;
@@ -147,7 +148,7 @@ body {
       }
     };
 
-    nextButton.addEventListener("click", () => {
+    /*nextButton.addEventListener("click", () => {
       nextSlide();
       if (auto) {
         clearInterval(slideInterval);
@@ -161,6 +162,7 @@ body {
         slideInterval = setInterval(nextSlide, intervalTime);
       }
     });
+    */
 
     if (auto) {
       slideInterval = setInterval(nextSlide, intervalTime);
