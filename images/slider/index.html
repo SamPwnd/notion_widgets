@@ -109,9 +109,6 @@ body {
 <body>
   <!-- partial:index.partial.html -->
   <div class="slider">
-    <div class="slide current"></div>
-    <div class="slide"></div>
-    <div class="slide"></div>
 
   </div>
   <!-- <div class="buttons">
@@ -121,6 +118,25 @@ body {
   -->
   <!-- partial -->
   <script>
+    // Ottenere il riferimento al div con classe "slider"
+    var slider = document.querySelector('.slider');
+
+    // Ciclo per creare gli elementi slide
+    for (var i = 0; i < 14; i++) {
+      // Creare un nuovo elemento div
+      var slideElement = document.createElement('div');
+      
+      // Aggiungere la classe "slide" all'elemento
+      slideElement.classList.add('slide');
+      
+      // Aggiungere la classe "current" al primo elemento
+      if (i === 0) {
+        slideElement.classList.add('current');
+      }
+      
+      // Aggiungere l'elemento al div "slider"
+      slider.appendChild(slideElement);
+    }
     const slides = document.querySelectorAll(".slide");
     //const nextButton = document.getElementById("next");
     //const prevButton = document.getElementById("prev");
